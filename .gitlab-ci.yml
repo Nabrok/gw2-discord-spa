@@ -1,0 +1,7 @@
+include:
+  - project: 'general/ci-includes'
+  file: 'spa-cloudfront.yml'
+
+variables:
+#  CLOUDFRONT_ID: ""
+#  CLOUDFRONT_URL: ""
