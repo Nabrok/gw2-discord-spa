@@ -20,7 +20,8 @@ module.exports = (_env, argv) => ({
 		compress: true,
 		historyApiFallback: true,
 		hot: true,
-		overlay: true
+		overlay: true,
+		contentBase: path.join(__dirname, 'public')
 	},
 	devtool: argv.mode === 'production' ? "" : "inline-source-map",
 	entry: {
@@ -57,7 +58,7 @@ module.exports = (_env, argv) => ({
 		alias: {
 			...Object.assign({}, argv.hot ? { 'react-dom': '@hot-loader/react-dom' } : { })
 		},
-		extensions: ['.js', '.json', '.sass', '.scss'],
+		extensions: ['.js', '.json', '.sass', '.scss', '.css'],
 		modules: [APP_DIR, "node_modules"]
 	},
 	node: {

@@ -15,10 +15,16 @@
   "author": "Nabrok",
   "license": "ISC",
   "dependencies": {
+    "bootswatch": "^4.3.1",
+    "client-oauth2": "^4.2.5",
     "core-js": "^3.2.1",
+    "immutable": "^4.0.0-rc.12",
     "react": "^16.10.1",
     "react-dom": "^16.10.1",
     "react-hot-loader": "^4.12.14",
+    "react-lazy-no-flicker": "^1.0.2",
+    "react-router-dom": "^5.1.2",
+    "reactstrap": "^8.0.1",
     "regenerator-runtime": "^0.13.3"
   },
   "devDependencies": {

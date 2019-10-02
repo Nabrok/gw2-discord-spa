@@ -19,6 +19,7 @@ plugins:
   - jest
 globals:
   BigInt: readonly
+  module: readonly
 settings:
   react:
     version: "detect"

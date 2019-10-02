@@ -1,7 +1,24 @@
 import React from 'react';
+import { BrowserRouter } from 'react-router-dom';
+import { lazy } from 'react-lazy-no-flicker';
+
+import Loading from './Loading';
+import { AuthProvider, Private } from './Auth';
+
+import 'bootswatch/dist/darkly/bootstrap.min';
+
+const Main = lazy(() => import('./Main'));
 
 function App() {
-	return <div>Hello world!</div>;
+	return <BrowserRouter>
+		<AuthProvider>
+			<React.Suspense fallback={<Loading />}>
+				<Private>
+					<Main />
+				</Private>
+			</React.Suspense>
+		</AuthProvider>
+	</BrowserRouter>;
 }
 
 export default App;
