@@ -20,6 +20,7 @@ plugins:
 globals:
   BigInt: readonly
   module: readonly
+  VERSION: readonly
 settings:
   react:
     version: "detect"

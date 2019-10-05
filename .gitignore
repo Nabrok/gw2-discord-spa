@@ -2,3 +2,4 @@ node_modules
 dist
 report.html
 public/oauth2.json
+public/graphql.json

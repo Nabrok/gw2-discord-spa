@@ -1,4 +1,5 @@
 const path = require('path');
+const webpack = require('webpack');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
@@ -49,6 +50,9 @@ module.exports = (_env, argv) => ({
 		new MiniCssExtractPlugin({
 			chunkFilename: argv.mode === 'production' ? '[id].[contenthash].css' : '[id].css',
 			filename: argv.mode === 'production' ? '[name].[contenthash].css' : '[name].css'
+		}),
+		new webpack.DefinePlugin({
+			VERSION: JSON.stringify(require('./package.json').version)
 		})
 	].concat(argv.hot ? [
 	] : [
