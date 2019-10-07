@@ -6,6 +6,7 @@ import { Jumbotron } from 'reactstrap';
 
 import Loading from '../Loading';
 import GraphQLError from '../GraphQLError';
+import MarkDown from '../MarkDown';
 
 import Emblem from './Emblem';
 
@@ -37,7 +38,7 @@ function GuildSummary(props) {
 			{ ' ' }
 			{ guild.name }
 		</h1>
-		{ guild.motd && <Jumbotron>{ guild.motd }</Jumbotron> }
+		{ guild.motd && <Jumbotron><MarkDown>{ guild.motd }</MarkDown></Jumbotron> }
 	</div>;
 }
 
