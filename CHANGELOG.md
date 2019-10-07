@@ -7,6 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 - Guild summary on home page
+- WvW Score page
 
 ## [1.0.0][] - 2019-10-05
 

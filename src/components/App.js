@@ -5,6 +5,7 @@ import { lazy } from 'react-lazy-no-flicker';
 import Loading from './Loading';
 import { AuthProvider, Private } from './Auth';
 import ApolloProvider from './ApolloProvider';
+import BotInfo from './BotInfo';
 
 import 'bootswatch/dist/darkly/bootstrap.min';
 //import 'bootswatch/dist/journal/bootstrap.min';
@@ -17,7 +18,9 @@ function App() {
 			<React.Suspense fallback={<Loading />}>
 				<Private>
 					<ApolloProvider>
-						<Main />
+						<BotInfo>
+							<Main />
+						</BotInfo>
 					</ApolloProvider>
 				</Private>
 			</React.Suspense>

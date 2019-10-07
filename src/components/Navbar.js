@@ -6,12 +6,9 @@ import { Link, useRouteMatch } from 'react-router-dom';
 import { Navbar, Nav, NavItem, NavLink, NavbarBrand, NavbarToggler, Collapse, UncontrolledDropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
 
 import { useAuth } from './Auth';
+import { useBotInfo } from './BotInfo';
 
 const GET_ME = gql`query {
-	bot {
-		id
-		username
-	}
 	me {
 		id
 		username
@@ -36,14 +33,16 @@ Item.propTypes = {
 function MyNavbar() {
 	const { data } = useQuery(GET_ME);
 	const { logout } = useAuth();
+	const bot = useBotInfo();
 
 	const [ collapse_open, setCollapseOpen ] = useState(false);
 
 	return <Navbar dark color="primary" expand="sm">
-		<NavbarBrand tag={Link} to="/">{ data && data.bot.username }</NavbarBrand>
+		<NavbarBrand tag={Link} to="/">{ bot.username }</NavbarBrand>
 		<NavbarToggler onClick={() => setCollapseOpen(current => ! current)} />
 		<Collapse isOpen={collapse_open} navbar>
 			<Nav navbar>
+				{ bot.features.some(f => f === 'wvw_score') && <Item to="/wvw">WvW</Item> }
 				<Item to="/about">About</Item>
 			</Nav>
 			{ data && <Nav className="ml-auto" navbar>
