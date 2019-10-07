@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Guild summary on home page
 - WvW Score page
 
+### Changed
+- Reduce initial bundle size
+
 ## [1.0.0][] - 2019-10-05
 
 - Initial release

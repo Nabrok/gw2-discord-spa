@@ -4,11 +4,8 @@ import { lazy } from 'react-lazy-no-flicker';
 
 import Loading from './Loading';
 import { AuthProvider, Private } from './Auth';
-import ApolloProvider from './ApolloProvider';
-import BotInfo from './BotInfo';
 
 import 'bootswatch/dist/darkly/bootstrap.min';
-//import 'bootswatch/dist/journal/bootstrap.min';
 
 const Main = lazy(() => import('./Main'));
 
@@ -17,11 +14,7 @@ function App() {
 		<AuthProvider>
 			<React.Suspense fallback={<Loading />}>
 				<Private>
-					<ApolloProvider>
-						<BotInfo>
-							<Main />
-						</BotInfo>
-					</ApolloProvider>
+					<Main />
 				</Private>
 			</React.Suspense>
 		</AuthProvider>
