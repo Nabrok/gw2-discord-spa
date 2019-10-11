@@ -5,7 +5,7 @@ import { lazy } from 'react-lazy-no-flicker';
 import Loading from './Loading';
 import { AuthProvider, Private } from './Auth';
 
-import 'bootswatch/dist/darkly/bootstrap.min';
+import './style';
 
 const Main = lazy(() => import('./Main'));
 

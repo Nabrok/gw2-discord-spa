@@ -20,6 +20,7 @@
     "apollo-client": "^2.6.4",
     "apollo-link-context": "^1.0.19",
     "apollo-link-http": "^1.5.16",
+    "bootstrap": "^4.3.1",
     "bootswatch": "^4.3.1",
     "client-oauth2": "^4.2.5",
     "core-js": "^3.2.1",
