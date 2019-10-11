@@ -1,6 +1,6 @@
 {
   "name": "gw2-discord-spa",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "SPA for gw2-discord-bot",
   "main": "index.js",
   "scripts": {
