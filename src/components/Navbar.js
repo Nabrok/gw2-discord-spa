@@ -42,6 +42,7 @@ function MyNavbar() {
 		<NavbarToggler onClick={() => setCollapseOpen(current => ! current)} />
 		<Collapse isOpen={collapse_open} navbar>
 			<Nav navbar>
+				{ bot.features.some(f => f === 'session') && <Item to="/session">Session</Item> }
 				{ bot.features.some(f => f === 'wvw_score') && <Item to="/wvw">WvW</Item> }
 				<Item to="/about">About</Item>
 			</Nav>
