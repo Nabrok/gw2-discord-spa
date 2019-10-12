@@ -31,7 +31,9 @@ const GET_SESSION = gql`query getSession {
 const recommended_permissions = [ 'progression', 'wallet', 'characters', 'unlocks', 'inventories', 'pvp' ];
 
 function Session() {
-	const { data, loading, error, refetch } = useQuery(GET_SESSION);
+	const { data, loading, error, refetch } = useQuery(GET_SESSION, {
+		fetchPolicy: 'cache-and-network'
+	});
 
 	const stop_time = data ? data.last_session.stop_time : undefined;
 
