@@ -48,7 +48,7 @@ function Session() {
 		};
 	}, [ stop_time, refetch ]);
 
-	if (loading) return <Loading />;
+	if (loading && ! data) return <Loading />;
 	if (error) return <GraphQLError error={ error } />;
 
 	const session = data.last_session;

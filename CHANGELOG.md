@@ -5,6 +5,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased][]
 
+### Fixed
+- Only show "Loading ..." when no data on session page
+
 ## [1.1.1][] - 2019-10-12
 
 ### Fixed
