@@ -42,7 +42,7 @@ function Achievements(props) {
 
 	if (achievements.length === 0) return null;
 
-	const filterIds = id => achievements.some(a => a.path[1] === id);
+	const filterIds = id => achievements.some(a => parseInt(a.path[1]) === id);
 
 	return <SectionCard title="Achievements">
 		{ categories.filter(category => category.get('achievements').some(filterIds)).valueSeq().toArray().map(category => <div key={category.get('id')}>
